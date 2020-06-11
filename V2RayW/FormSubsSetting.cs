@@ -72,6 +72,7 @@ namespace V2RayW
             if (selectedIndex > 0 && selectedIndex < Program.subsProfiles.Count)
             {
                 listBoxSubs.Items.RemoveAt(selectedIndex);
+                listBoxSubs.SelectedIndex = listBoxSubs.Items.Count - 1;
                 SubsProfile deletedSubs = Program.subsProfiles[selectedIndex];
                 Program.subsProfiles.Remove(deletedSubs);
                 Program.subsProfiles[0].SubsRefList.Remove(deletedSubs);
